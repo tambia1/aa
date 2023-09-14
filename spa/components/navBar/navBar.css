@@ -1,0 +1,390 @@
+.navbar
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+
+
+.navbar_header
+{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	overflow: hidden;
+	
+	z-index: 1;
+
+	transform: translate3d(0px, 0px, 0px);
+
+	background-image: linear-gradient(#ffffff 0%, #F6F6F6 30%, #F3F3F3 45%, #EDEDED 60%, #eeeeee 100%);
+
+	box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 20%)
+}
+
+.navbar_header[isVisible = 'false']
+{
+	display: none;
+}
+
+.navbar_header[state = "goRight"]
+{
+	transform: translate3d(100%, 0px, 0px);
+}
+
+.navbar_header[state = "moveRight"]
+{
+	transform: translate3d(100%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_header[state = "goCenter"]
+{
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.navbar_header[state = "moveCenter"]
+{
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_header[state = "goLeft"]
+{
+	transform: translate3d(-100%, 0px, 0px);
+}
+
+.navbar_header[state = "moveLeft"]
+{
+	transform: translate3d(-100%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_header[state = "show"]
+{
+	opacity: 1;
+}
+
+.navbar_header[state = "hide"]
+{
+	opacity: 0;
+}
+
+.navbar_header[state = "appear"]
+{
+	opacity: 1;
+	transition: opacity 0.3s ease 0s;
+}
+
+.navbar_header[state = "disappear"]
+{
+	opacity: 0;
+	transition: opacity 0.3s ease 0s;
+}
+
+
+
+.navbar_header_title
+{
+	position: absolute;
+	left: 60px;
+	right: 60px;
+	top: 0px;
+	bottom: 0px;
+	font-size: 160%;
+	font-weight: bold;
+	color: #000000;
+	text-shadow: 0px 1px 3px #999999;
+	white-space: nowrap;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.navbar_header_title[state = "goRight"]
+{
+	opacity: 0;
+	transform: translate3d(100%, 0px, 0px);
+	pointer-events: none;
+}
+
+.navbar_header_title[state = "moveRight"]
+{
+	opacity: 0;
+	
+	transform: translate3d(100%, 0px, 0px);
+	transition: transform 0.3s ease 0s, opacity 0.1s ease 0s;
+
+	pointer-events: none;
+}
+
+.navbar_header_title[state = "goCenter"]
+{
+	opacity: 1;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.navbar_header_title[state = "moveCenter"]
+{
+	opacity: 1;
+
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.navbar_header_title[state = "goLeft"]
+{
+	opacity: 0;
+	transform: translate3d(-100%, 0px, 0px);
+	pointer-events: none;
+}
+
+.navbar_header_title[state = "moveLeft"]
+{
+	opacity: 0;
+
+	transform: translate3d(-100%, 0px, 0px);
+	transition: transform 0.3s ease 0s, opacity 0.1s ease 0s;
+
+	pointer-events: none;
+}
+
+
+
+.navbar_header_title[state = "show"]
+{
+	opacity: 1;
+}
+
+.navbar_header_title[state = "hide"]
+{
+	opacity: 0;
+}
+
+.navbar_header_title[state = "appear"]
+{
+	opacity: 1;
+	transition: opacity 0.3s ease 0s;
+}
+
+.navbar_header_title[state = "disappear"]
+{
+	opacity: 0;
+	transition: opacity 0.3s ease 0s;
+}
+
+
+.navbar_header_title_text
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.navbar_panel
+{
+	position: absolute;
+	left: 0px;
+	top: 40px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+}
+
+.navbar_panel[state = "moveRight"]
+{
+	transform: translate3d(75%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_panel[state = "moveLeft"]
+{
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_panel .navbar_view[state = "goRight"]
+{
+	transform: translate3d(100%, 0px, 0px);
+}
+
+.navbar_panel .navbar_view[state = "moveRight"]
+{
+	transform: translate3d(100%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_panel .navbar_view[state = "goCenter"]
+{
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.navbar_panel .navbar_view[state = "moveCenter"]
+{
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_panel .navbar_view[state = "goLeft"]
+{
+	transform: translate3d(-100%, 0px, 0px);
+}
+
+.navbar_panel .navbar_view[state = "moveLeft"]
+{
+	transform: translate3d(-100%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar_panel .navbar_view[state = "moveLeft"]
+{
+	display: none;
+}
+
+.navbar_panel .navbar_view[state = "moveLeft"]:nth-last-child(1),
+.navbar_panel .navbar_view[state = "moveLeft"]:nth-last-child(2)
+{
+	display: block;
+}
+
+
+
+
+.navbar_panel .navbar_view[state = "show"]
+{
+	opacity: 1;
+}
+
+.navbar_panel .navbar_view[state = "appear"]
+{
+	opacity: 1;
+	transition: opacity 0.3s ease 0s;
+}
+
+.navbar_panel .navbar_view[state = "hide"]
+{
+	opacity: 0;
+}
+
+.navbar_panel .navbar_view[state = "disappear"]
+{
+	opacity: 0;
+	transition: opacity 0.3s ease 0s;
+}
+
+
+
+
+
+#navbar_button_back
+{
+	position: absolute;
+	
+	transition: opacity 0.3s linear 0s;
+
+	z-index: 1;
+}
+
+#navbar_button_back[isVisible = 'false']
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+#navbar_button_back > .navbar_button_text
+{
+	background-image: url('../images/left.png');
+}
+
+html[dir="rtl"] #navbar_button_back > .navbar_button_text
+{
+	transform: scaleX(1);
+}
+
+
+
+#navbar_button_home
+{
+	position: absolute;
+	
+	transition: opacity 0.3s linear 0s;
+
+	z-index: 1;
+}
+
+#navbar_button_home[isVisible = 'false']
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+#navbar_button_home > .navbar_button_text
+{
+	background-image: url('../images/leftDouble.png');
+}
+
+html[dir="rtl"] #navbar_button_home > .navbar_button_text
+{
+	transform: scaleX(1);
+}
+
+
+
+#navbar_button_close
+{
+	position: absolute;
+	
+	transition: opacity 0.3s linear 0s;
+
+	z-index: 1;
+}
+
+#navbar_button_close[isVisible = 'false']
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+#navbar_button_close > .navbar_button_text
+{
+	background-image: url('../images/checkX.png');
+}
+
+html[dir="rtl"] #navbar_button_close > .navbar_button_text
+{
+	transform: scaleX(1);
+}
+
+
+
+
+
+
+.navbar[state = "moveRight"]
+{
+	transform: translate3d(75%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar[state = "moveCenter"]
+{
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+
+.navbar[state = "moveLeft"]
+{
+	transform: translate3d(-75%, 0px, 0px);
+	transition: transform 0.3s ease 0s;
+}
+

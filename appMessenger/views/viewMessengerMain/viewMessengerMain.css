@@ -1,0 +1,121 @@
+#view_messenger_main
+{
+	background-color: #000000;
+	color: var(--color_text);
+}
+
+#view_messenger_main__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 50px;
+}
+
+#view_messenger_main__panel .container
+{
+	padding: 10px;
+}
+
+.view_messenger_main__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_messenger_main__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_messenger_main__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_messenger_main__space
+{
+	height: 10px;
+}
+
+
+
+.tabbar_button
+{
+	width: 20%;
+}
+
+.tabbar_button .tabbar_button_text
+{
+	font-size: 80%;
+}
+
+.tabbar_button[isSelected = 'false'] .tabbar_button_text
+{
+	color: #4d4d4d;
+}
+
+.tabbar_button[isSelected = 'true'] .tabbar_button_text
+{
+	color: #03AD94;
+}
+
+.tabbar_button[isSelected = 'false'] .view_messenger_main__image_coupons
+{
+	background-image: url('./images/alm_tb_off_coupons.png');
+}
+
+.tabbar_button[isSelected = 'true'] .view_messenger_main__image_coupons
+{
+	background-image: url('./images/alm_tb_on_coupons.png');
+}
+
+.tabbar_button[isSelected = 'false'] .view_messenger_main__image_brands
+{
+	background-image: url('./images/alm_tb_off_brands.png');
+}
+
+.tabbar_button[isSelected = 'true'] .view_messenger_main__image_brands
+{
+	background-image: url('./images/alm_tb_on_brands.png');
+}
+
+.tabbar_button[isSelected = 'false'] .view_messenger_main__image_my_favorites
+{
+	background-image: url('./images/alm_tb_off_favorites.png');
+}
+
+.tabbar_button[isSelected = 'true'] .view_messenger_main__image_my_favorites
+{
+	background-image: url('./images/alm_tb_on_favorites.png');
+}
+
+.tabbar_button[isSelected = 'false'] .view_messenger_main__image_more
+{
+	background-image: url('./images/alm_tb_off_more.png');
+}
+
+.tabbar_button[isSelected = 'true'] .view_messenger_main__image_more
+{
+	background-image: url('./images/alm_tb_on_more.png');
+}
+
+.tabbar_button[isSelected = 'false'] .view_messenger_main__image_products
+{
+	background-image: url('./images/alm_tb_off_deals.png');
+}
+
+.tabbar_button[isSelected = 'true'] .view_messenger_main__image_products
+{
+	background-image: url('./images/alm_tb_on_deals.png');
+}
+

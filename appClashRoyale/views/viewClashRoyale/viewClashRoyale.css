@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'clashRoyaleFont';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/SupercellMagicFont.ttf');
+}
+
+
+#view_clash_royale
+{
+	background-color: #000000;
+	color: var(--color_text);
+
+	display: flex;
+    align-items: center;
+    justify-content: center;	
+
+	font-family: "clashRoyaleFont", sans-serif;
+}
+
+
+
+.view_clash_royale__page
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.view_clash_royale__page[isVisible = 'false']
+{
+	display: none;	
+}
+
+
+
+.view_clash_royale__bg
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-image: url('./images/misc/bg.webp');
+	background-size: 340px;
+}
+
+.view_clash_royale__splash
+{
+	position: absolute;
+    width: 375px;
+    height: 595px;
+    background-image: url('./images/misc/splash_0.png'), url('./images/misc/splash_1.png'), url('./images/misc/splash_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+	background-position: 50% 0%;
+    display: flex;
+	justify-content: center;
+}
+
+
+.view_clash_royale__bg_game
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-image: url(./images/arenas/arena1.jpg);
+    background-size: cover;
+	background-position: 50% 50%;
+    filter: blur(2px);	
+}
+
+.view_clash_royale__bg_game[arena = 'arena1']
+{
+	background-image: url(./images/arenas/arena1.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena2']
+{
+	background-image: url(./images/arenas/arena2.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena3']
+{
+	background-image: url(./images/arenas/arena3.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena4']
+{
+	background-image: url(./images/arenas/arena4.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena5']
+{
+	background-image: url(./images/arenas/arena5.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena6']
+{
+	background-image: url(./images/arenas/arena6.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena7']
+{
+	background-image: url(./images/arenas/arena7.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena8']
+{
+	background-image: url(./images/arenas/arena8.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena9']
+{
+	background-image: url(./images/arenas/arena9.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena10']
+{
+	background-image: url(./images/arenas/arena10.jpg);
+}
+
+.view_clash_royale__bg_game[arena = 'arena11']
+{
+	background-image: url(./images/arenas/arena11.jpg);
+}
+
+.view_clash_royale__board
+{
+	position: absolute;
+    width: 689px;
+    height: 963px;
+    width: 550px;
+    height: 768px;
+    display: flex;
+    justify-content: center;
+}
+
+.view_clash_royale__canvas
+{
+
+}
+
+
+.view_clash_royale__button_yellow
+{
+	position: absolute;
+	bottom: 100px;
+	width: 150px;
+    height: 76px;
+    background-image: url(./images/misc/button_yellow.png);
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	color: #ffffff;
+	text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 3px 3px 5px #000000;
+}
+
+.view_clash_royale__button_yellow[isVisible = 'false']
+{
+	display: none;	
+}
+
+.view_clash_royale__button_yellow[isPressed = 'true']
+{
+	transform: scale(1.1);
+}
+
+
+.view_clash_royale__loading
+{
+	position: absolute;
+	bottom: 80px;
+	width: 150px;
+    height: 76px;
+    z-index: 1;
+	color: #ffffff;
+	text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 3px 3px 5px #000000;
+}
+
+.view_clash_royale__loading[isVisible = 'false']
+{
+    display: none;
+}
+
+
+
+
+.view_clash_royale__paging
+{
+	height: 250px;
+    bottom: 200px;
+    top: auto;
+}
+
+.view_clash_royale__paging[isVisible = 'false']
+{
+	display: none;
+}
+
+.view_clash_royale__paging_item
+{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.view_clash_royale_arena_icon_1
+{
+	background-image: url('./images/arenas/arenaIcon1.png');
+}
+
+.view_clash_royale_arena_icon_2
+{
+	background-image: url('./images/arenas/arenaIcon2.png');
+}
+
+.view_clash_royale_arena_icon_3
+{
+	background-image: url('./images/arenas/arenaIcon3.png');
+}
+
+.view_clash_royale_arena_icon_4
+{
+	background-image: url('./images/arenas/arenaIcon4.png');
+}
+
+.view_clash_royale_arena_icon_5
+{
+	background-image: url('./images/arenas/arenaIcon5.png');
+}
+
+.view_clash_royale_arena_icon_6
+{
+	background-image: url('./images/arenas/arenaIcon6.png');
+}
+
+.view_clash_royale_arena_icon_7
+{
+	background-image: url('./images/arenas/arenaIcon7.png');
+}
+
+.view_clash_royale_arena_icon_8
+{
+	background-image: url('./images/arenas/arenaIcon8.png');
+}
+
+.view_clash_royale_arena_icon_9
+{
+	background-image: url('./images/arenas/arenaIcon9.png');
+}
+
+.view_clash_royale_arena_icon_10
+{
+	background-image: url('./images/arenas/arenaIcon10.png');
+}
+
+.view_clash_royale_arena_icon_11
+{
+	background-image: url('./images/arenas/arenaIcon11.png');
+}

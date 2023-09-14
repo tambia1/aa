@@ -1,0 +1,61 @@
+#view_settings
+{
+	background-color: var(--color_view_bg);
+	color: var(--color_text);
+}
+
+#view_settings__panel
+{
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.view_settings__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 200%;
+	margin: 30px 10px 10px 10px;
+}
+
+.view_settings__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font: 160%;
+	margin: 10px;
+}
+
+.view_settings__caption
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 120%;
+	margin: 10px;
+}
+
+.view_settings__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_settings__space
+{
+	height: 10px;
+}
+
+
+
+.view_settings__image-language
+{
+	background-image: url(./images/setting.webp);
+}
+
+.view_settings__image-theme
+{
+	background-image: url(./images/theme.webp);
+}

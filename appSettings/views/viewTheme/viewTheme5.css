@@ -1,0 +1,6 @@
+html[theme = 'theme5'] #view_desktop 
+{
+    background-image: url(./imagesTheme5/bg_0.jpg), url(./imagesTheme5/bg_1.jpg);
+    background-size: cover;
+    color: #ffffff;
+}

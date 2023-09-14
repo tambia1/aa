@@ -1,0 +1,35 @@
+.slider
+{
+	display: inline-block;
+	width: 100px;
+	height: 10px;
+
+	background-color: #333333;
+	border-radius: 5px;
+	box-shadow: 0 0 1px #000000 inset, 0 3px 3px -3px #000000 inset, 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+}
+
+.slider_button
+{
+	width: 30px;
+	height: 30px;
+	position: relative;
+	left: -18px;
+	top: -12px;
+	border-radius: 15px;
+
+	box-shadow: 1px 1px 2px #000000;
+
+	background-color: #ffffff;	
+	background-image: linear-gradient(rgba(128, 128, 128, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+	transition: height 0.3s ease-out 0s, width 0.3s ease-out 0s, left 0.3s ease-out 0s, top 0.3s ease-out 0s;
+}
+
+.slider_button[isPressed = 'true']
+{
+	width: 6px;
+	height: 60px;
+	top: -32px;
+	left: -3px;
+}

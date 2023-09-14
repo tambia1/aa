@@ -1,0 +1,67 @@
+.pagingbar
+{
+}
+
+.pagingbar .paging
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 38px;
+	bottom: 0px;
+}
+
+
+
+#pagingbar_panel_buttons
+{
+	height: 37px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	background-color: transparent;
+}
+
+
+
+.pagingbar_button
+{
+	min-width: 80px;
+	height: 37px;
+	display: inline-block;
+	padding-left: 2px;
+	padding-right: 2px;
+
+	margin-right: 1.5px;
+	
+	line-height: 37px;
+	text-align: center;
+
+	background-image: linear-gradient(#ffffff 0%, #F6F6F6 30%, #F3F3F3 45%, #EDEDED 60%, #eeeeee 100%);
+
+	font-size: 100%;
+	font-weight: bold;
+	color: #000000;
+	white-space: nowrap;
+
+	border-radius: 15px 15px 0px 0px;
+
+	transition: background-color 0.3s ease 0s;
+}
+
+.pagingbar_button[isSelected = 'false']
+{
+
+}
+
+.pagingbar_button[isSelected = 'true']
+{
+	background: linear-gradient(#acc5e9 0%, #a3c0f2 18%,#61a0ed 39%, #55a3f2 70%, #82c2f1 91.72%, #9AD2F2 100%);
+}
+
+.pagingbar_button[isPressed = 'true']
+{
+	background: linear-gradient(#acc5e9 0%, #a3c0f2 18%,#61a0ed 39%, #55a3f2 70%, #82c2f1 91.72%, #9AD2F2 100%);
+}
+

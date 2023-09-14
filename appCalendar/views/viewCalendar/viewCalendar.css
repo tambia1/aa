@@ -1,0 +1,113 @@
+#view_calendar
+{
+	background-color: #ffffff;
+	color: var(--color_text);
+}
+
+#view_calendar__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#view_calendar__panel .container
+{
+
+}
+
+.view_calendar__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_calendar__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_calendar__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_calendar__space
+{
+	height: 10px;
+}
+
+
+
+.view_calendar__year
+{
+
+}
+
+.view_calendar__year_title
+{
+	font-size: 200%;
+	font-weight: bold;	
+	margin: 10px;
+}
+
+.view_calendar__year_title[isSelected = 'true']
+{
+	color: #ff4500;
+}
+
+.view_calendar__line
+{
+	background-color: #eeeeee;
+	height: 1px;
+	margin: 10px;
+}
+
+.view_calendar__month
+{
+	display: inline-flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+.view_calendar__month_title
+{
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.view_calendar__month_title[isSelected = 'true']
+{
+	color: #ff4500;
+}
+
+.view_calendar__month_box
+{
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 2px;
+}
+
+.view_calendar__day_title
+{
+	font-size: 80%;
+    padding: 1px;
+}
+
+.view_calendar__day_title[isSelected = 'true']
+{
+	color: #ffffff;
+    background-color: #ff4500;
+    border-radius: 50px;
+}

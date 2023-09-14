@@ -1,0 +1,124 @@
+#view_messenger_chat
+{
+	background-color: #000000;
+	color: var(--color_text);
+}
+
+#view_messenger_chat__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 50px;
+}
+
+#view_messenger_chat__panel .container
+{
+	padding: 10px;
+}
+
+.view_messenger_chat__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_messenger_chat__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_messenger_chat__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_messenger_chat__space
+{
+	height: 10px;
+}
+
+
+
+.view_messenger_chat__message
+{
+	position: absolute;
+	bottom: 0px;
+	height: 50px;
+}
+
+.view_messenger_chat__message #messagebar_send
+{
+	background-color: #aaffaa;
+    color: #333333;
+}
+
+.view_messenger_chat__message #messagebar_send[isPressed = 'true']
+{
+	opacity: 0.5;
+}
+
+
+.view_messenger_chat__message_me
+{
+	background-color: #aaffaa;
+	margin: 10px;
+	border-radius: 16px;
+	color: #333333;
+	padding: 5px;
+	margin-left: 50px;
+}
+
+.view_messenger_chat__message_me_message
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.view_messenger_chat__message_me_status
+{
+	text-align: end;
+}
+
+
+.view_messenger_chat__message_other
+{
+	background-color: #aaaaff;
+	margin: 10px;
+	border-radius: 16px;
+	color: #333333;
+	padding: 5px;
+	margin-right: 50px;
+}
+
+.view_messenger_chat__message_other_message
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.view_messenger_chat__message_other_name
+{
+	text-align: start;
+	color: #666666;
+}
+
+
+
+
+.view_messenger_chat__connection_status
+{
+	color: #ffffff; 
+	text-align: right;
+	margin: 5px;
+}
+

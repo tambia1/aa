@@ -1,0 +1,27 @@
+.legend
+{
+	display: table;
+	height: 30px;
+}
+
+.legend_text
+{
+	display: table-cell; 
+	width: auto;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.legend_line
+{
+	display: table-cell; 
+	width: 100%; 
+	vertical-align: middle;	
+}
+
+.legend hr
+{
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	margin-left: 5px;
+}

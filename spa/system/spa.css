@@ -1,0 +1,245 @@
+html, body, table, tbody, td, tr, select, input, textarea
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+
+	touch-callout: none;
+	tap-highlight-color: rgba(0,0,0,0);
+
+	-webkit-user-select: none;
+	user-select: none;
+
+	overscroll-behavior-x: none;
+}
+
+html
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	direction: ltr;
+}
+
+body 
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+
+	color: #000000;
+	background-color: #ffffff;
+
+	font-size: 12px;
+	font-family: sans-serif, Helvetica;
+	line-height: 1.0;
+
+	overflow: hidden;
+	
+	display: table;
+    border-spacing: 0;
+}
+
+ 
+textarea
+{
+	resize: none;
+}
+
+img[typeof]
+{
+	pointer-events: none;
+	touch-callout: none;
+}
+
+select
+{
+	border: transparent;
+	background-color: transparent;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 100%;
+	font-weight: bold;
+	
+	height: 25px;
+	width: 200%;
+	margin-left: -1px;
+}
+
+iframe
+{
+	border: 0px;
+}
+
+select:focus 
+{
+	outline: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active
+{
+	text-decoration: none;
+	tap-highlight-color: rgba(0,0,0,0);
+}
+
+.repaint
+{
+	border-top: 1px solid transparent;
+}
+
+#scale
+{
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	transform-origin: 0 0;
+}
+
+*[contenteditable]
+{
+	outline: none;
+}
+
+input
+{
+	background-color: #ffffff;
+	border-radius: 3px;
+	padding: 3px;
+	transform: translateZ(0px);
+	-webkit-user-select: text;
+	user-select: text;
+	box-sizing: border-box;
+}
+
+input[type='text'],
+input[type='password']
+{
+	resize: none;
+	font-size: inherit;
+}
+
+input:focus
+{
+	outline: none;
+	box-shadow: 0px 0px 1px 1px #4189c3;
+	-webkit-appearance: none;
+}
+
+ul, ol
+{
+	margin: 0px;
+	margin-left: 10px;
+	padding: 0px;
+	padding-left: 10px;
+}
+
+html[dir="rtl"] ul, ol
+{
+	direction: rtl;
+}
+
+html[dir="rtl"] input
+{
+	transform: scaleX(-1);
+	direction: rtl;
+	text-align: right;
+}
+
+html[dir="rtl"]
+{
+	transform: scaleX(-1);
+}
+
+html[dir="rtl"] *[data-string]
+{
+	transform: scaleX(-1);
+	direction: rtl;
+}
+
+html[dir="rtl"] *[data-image]
+{
+	transform: scaleX(-1);
+	direction: rtl;
+}
+
+html[dir="rtl"] *[data-video]
+{
+	transform: scaleX(-1);
+	direction: rtl;
+}
+
+
+#main
+{
+	display: inline-block;
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+
+.str
+{
+	display: contents;
+}
+
+.str_bold
+{
+	font-weight: bold;
+}
+
+.str_italic
+{
+	font-style: italic;
+}
+
+.str_white
+{
+	color: #ffffff;
+}
+
+.str_black
+{
+	color: #000000;
+}
+
+.str_red
+{
+	color: #ff0000;
+}
+
+.str_green
+{
+	color: #00ff00;
+}
+
+.str_blue
+{
+	color: #0000ff;
+}
+
+.str_link
+{
+	display: inline-block;
+	font-weight: bold;
+	color: #999999;
+	text-decoration: underline;
+}
+
+.str_link[isPressed = 'true']
+{
+	color: #ffffff;
+	background-color: #aaaaaa;
+}

@@ -1,0 +1,39 @@
+.checkbox
+{
+	display: inline-flex;
+	align-items: center;
+}
+
+.checkbox_text
+{
+	display: inline-block;
+	margin-left: 3px;
+}
+
+input[type="checkbox"]
+{
+	display: none;
+	-webkit-appearance: checkbox;
+}
+
+input[type="checkbox"] + label
+{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-size: 100%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-image: url('./images/checkBoxEmpty.png');
+}
+
+input[type="checkbox"]:checked + label
+{
+	background-image: url('./images/checkBoxFull.png');
+}
+
+html[dir="rtl"] input[type="checkbox"]:checked + label
+{
+	transform: scaleX(-1);
+	direction: rtl;
+}

@@ -1,0 +1,27 @@
+.progressbar
+{
+	width: 100px;
+	height: 10px;
+
+	border-radius: 7px;
+	
+	background-color: #000000;
+	border: 1px solid #000000;
+}
+
+.progressbar_value
+{
+	width: 0%;
+	height: 100%;
+	position: relative;
+	
+	border-radius: 6px;
+
+	background-color: #ffffff;
+	background-image: linear-gradient(rgba(128, 128, 128, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.progressbar_value[isAnimated = 'true']
+{
+	transition: width 0.3s ease 0s;
+}

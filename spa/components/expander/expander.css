@@ -1,0 +1,21 @@
+.expander
+{
+	overflow: hidden;
+	max-height: 0px;
+}
+
+.expander[isAnimated = 'true']
+{
+	transition: max-height 0.3s ease 0s;
+}
+
+.expander[status = 'collapsed']
+{
+
+}
+
+.expander[status = 'expanded']
+{
+	max-height: inherit;
+}
+

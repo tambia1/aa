@@ -1,0 +1,43 @@
+#view_ninja
+{
+	background-color: var(--color_view_bg);
+	color: var(--color_text);
+	overflow: hidden;
+}
+
+html[dir="rtl"] #view_ninja_canvas
+{
+	transform: scaleX(-1);
+}
+
+#view_ninja_board
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-image: url('./images/board.jpg');
+	background-size: 100% 100%;
+}
+
+#view_ninja_grass
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 97px;
+	background-image: url('./images/grass.png');
+}
+
+#view_ninja_canvas
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+

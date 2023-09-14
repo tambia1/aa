@@ -1,0 +1,144 @@
+#view_calculator
+{
+	background-color: #000000;
+	color: var(--color_text);
+}
+
+#view_calculator__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#view_calculator__panel .container
+{
+	padding: 10px;
+}
+
+.view_calculator__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_calculator__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_calculator__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_calculator__space
+{
+	height: 10px;
+}
+
+
+
+
+.view_calculator__buttons_container
+{
+	position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+
+	font-size: 250%;
+
+	margin: 10px;
+}
+
+.view_calculator_result
+{
+	color: #ffffff;
+    font-size: 200%;
+    font-weight: normal;
+    height: auto;
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    justify-self: end;
+    margin: 5px;
+}
+
+
+@keyframes animationCalculatorResultShow { 0% { opacity: 0.5; } 100% { opacity: 1; }}
+
+.view_calculator_result[state = 'showWithAnimation']
+{
+	animation: animationCalculatorResultShow 0.01s linear 0s 1 normal both;
+}
+
+@keyframes animationCalculatorResultHide { 0% { opacity: 1; } 100% { opacity: 0; }}
+
+.view_calculator_result[state = 'hideWithAnimation']
+{
+	animation: animationCalculatorResultHide 0.01s linear 0s 1 normal both;
+}
+
+.view_calculator_result[state = 'showWithoutAnimation']
+{
+	opacity: 1;
+}
+
+.view_calculator_result[state = 'hideWithoutAnimation']
+{
+	opacity: 0;
+}
+
+
+.view_calculator__button
+{
+	width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: opacity 0.3s ease 0s;
+}
+
+.view_calculator__button[isPressed = 'true']
+{
+	opacity: 0.5;
+}
+
+.view_calculator__button_yellow
+{
+    background-color: #FF9501;
+	color: #ffffff;
+}
+
+.view_calculator__button_brown
+{
+    background-color: #323232;
+	color: #ffffff;
+}
+
+.view_calculator__button_grey
+{
+    background-color: #A7A7A7;
+	color: #000000;
+}
+
+.view_calculator__button_zero
+{
+	grid-column: 1 / span 2;
+    grid-row: 6;
+}
+

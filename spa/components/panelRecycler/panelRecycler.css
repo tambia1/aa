@@ -1,0 +1,105 @@
+.panelRecycler
+{
+	position: absolute;
+	overflow: hidden;
+
+	width: auto;
+	height: auto;
+
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.panelRecycler[direction = 'ver']
+{
+	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	overflow-y: overlay;
+
+	scrollbar-width: thin;
+	scrollbar-color: #666666 transparent;
+}
+
+.panelRecycler[direction = 'hor']
+{
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;
+	overflow-x: overlay;
+	overflow-y: hidden;
+
+	scrollbar-width: thin;
+	scrollbar-color: #666666 transparent;
+}
+
+.panelRecycler[direction = 'hor'] > .panelRecycler_container_hor[isVisible = 'false']
+{
+	opacity: 0;
+}
+
+.panelRecycler[direction = 'hor'] > .panelRecycler_container_hor[isVisible = 'true']
+{
+	transition: opacity 0.3s ease 0s;
+	opacity: 1;
+}
+
+.panelRecycler_container_ver
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	height: auto;
+	overflow: hidden;
+
+	transform: translateZ(0px);
+}
+
+.panelRecycler_container_hor
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: auto;
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	transform: translateZ(0px);
+}
+
+
+/*fix bug with chrome touch scrolling in wrong direction when RTL*/
+html[dir="rtl"] .panelRecycler[direction = 'hor']
+{
+	transform: scaleX(-1);
+}
+
+html[dir="rtl"] .panelRecycler[direction = 'hor'] .panelRecycler_container_hor
+{
+	transform: scaleX(-1);
+}
+
+
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	height: 6px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 3px;
+}
+
+.panelRecycler[direction = 'ver']::-webkit-scrollbar-thumb
+{
+	background: #666666;
+	border-radius: 3px;
+}

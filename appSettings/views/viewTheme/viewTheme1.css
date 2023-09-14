@@ -1,0 +1,6 @@
+html[theme = 'theme1'] #view_desktop 
+{
+    background-image: url(./imagesTheme1/bg_0.png), url(./imagesTheme1/bg_1.png);
+    background-size: cover;
+    color: #ffffff;
+}

@@ -1,0 +1,78 @@
+#view_messenger_details
+{
+	background-color: #000000;
+	color: var(--color_text);
+}
+
+#view_messenger_details__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 50px;
+}
+
+#view_messenger_details__panel .container
+{
+	padding: 10px;
+}
+
+.view_messenger_details__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_messenger_details__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_messenger_details__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+	color: #ffffff;
+}
+
+.view_messenger_details__space
+{
+	height: 10px;
+}
+
+
+
+.view_messenger_details__message
+{
+	position: relative;
+	bottom: 0px;
+	height: 50px;
+	background-color: transparent;
+}
+
+.view_messenger_details__message .messagebar_container
+{
+	left: 0px;
+	right: unset;
+}
+
+.view_messenger_details__message #messagebar_send
+{
+	background-color: #aaffaa;
+}
+
+.view_messenger_details__message #messagebar_send[isPressed = 'true']
+{
+	opacity: 0.5;
+}
+
+
+

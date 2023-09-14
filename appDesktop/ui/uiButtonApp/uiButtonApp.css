@@ -1,0 +1,109 @@
+.ui_button_app
+{
+	position: relative;
+	width: 80px;
+	height: 100px;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+    flex-shrink: 0;
+	align-items: center;
+    justify-content: center;
+	align-self: center;
+    justify-self: center;
+}
+
+.ui_button_app__image
+{
+	width: 70px;
+	height: 70px;
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-radius: 20px;
+}
+
+.ui_button_app__text
+{
+	width: 80px;
+    height: 20px;
+    color: var(--color_0_regular);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ui_button_app__cover
+{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background-color: transparent;
+	border-radius: 20px;
+	top: 0px;
+}
+
+.ui_button_app__cover[isPressed = 'true']
+{
+	background-color: #00000033;
+}
+
+
+
+
+@-webkit-keyframes ui_button_app_shake_0
+{
+	0% 		{ -webkit-transform: rotateZ(0deg); }
+	33%		{ -webkit-transform: rotateZ(-4deg); }
+	66%		{ -webkit-transform: rotateZ(4deg); }
+	100%	{ -webkit-transform: rotateZ(0deg); }
+}
+
+.ui_button_app[shake = '0']
+{
+	-webkit-animation: ui_button_app_shake_0 0.3s linear infinite normal forwards;
+}
+
+@-webkit-keyframes ui_button_app_shake_1
+{
+	0% 		{ -webkit-transform: rotateZ(0deg); }
+	33%		{ -webkit-transform: rotateZ(4deg); }
+	66%		{ -webkit-transform: rotateZ(-4deg); }
+	100%	{ -webkit-transform: rotateZ(0deg); }
+}
+
+.ui_button_app[shake = '1']
+{
+	-webkit-animation: ui_button_app_shake_1 0.3s linear infinite normal forwards;
+}
+
+@-webkit-keyframes ui_button_app_shake_2
+{
+	0% 		{ -webkit-transform: rotateZ(4deg); }
+	33%		{ -webkit-transform: rotateZ(0deg); }
+	66%		{ -webkit-transform: rotateZ(-4deg); }
+	100%	{ -webkit-transform: rotateZ(4deg); }
+}
+
+.ui_button_app[shake = '2']
+{
+	-webkit-animation: ui_button_app_shake_2 0.3s linear infinite normal forwards;
+}
+
+@-webkit-keyframes ui_button_app_shake_3
+{
+	0% 		{ -webkit-transform: rotateZ(-4deg); }
+	33%		{ -webkit-transform: rotateZ(0deg); }
+	66%		{ -webkit-transform: rotateZ(4deg); }
+	100%	{ -webkit-transform: rotateZ(-4deg); }
+}
+
+.ui_button_app[shake = '3']
+{
+	-webkit-animation: ui_button_app_shake_3 0.3s linear infinite normal forwards;
+}
+
+

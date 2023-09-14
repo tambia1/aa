@@ -1,0 +1,48 @@
+.button_text
+{
+	display: inline-block;
+	overflow: hidden;
+
+	height: 25px;
+
+	font-size: 100%;
+	font-weight: bold;
+	color: #000000;
+	cursor: default;
+
+	transition-duration: 0.1s;
+}
+
+
+
+.button_text[isEnabled = 'true']
+{
+}
+
+.button_text[isEnabled = 'false']
+{
+	color: #999999;
+}
+
+
+
+.button_text[isPressed = 'true']
+{
+
+}
+
+.button_text[isPressed = 'false']
+{
+}
+
+
+
+.button_text_string
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	white-space: pre;
+}

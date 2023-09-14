@@ -1,0 +1,36 @@
+html[theme = 'theme6'] #view_desktop 
+{
+    background-image: url(./imagesTheme6/bg_0.jpg), url(./imagesTheme6/bg_1.jpg);
+    background-size: cover;
+    color: #ffffff;
+}
+
+html[theme = 'theme6'] .image__settings
+{
+    background-image: url('./imagesTheme6/Settings.png');
+}
+
+html[theme = 'theme6'] .image__calendar
+{
+    background-image: url('./imagesTheme6/icon_Calendar.png');
+}
+
+html[theme = 'theme6'] .image__photos
+{
+    background-image: url('./imagesTheme6/Donut.png');
+}
+
+html[theme = 'theme6'] .image__camera
+{
+    background-image: url('./imagesTheme6/icon_Binocle.png');
+}
+
+html[theme = 'theme6'] .image__contacts
+{
+    background-image: url('./imagesTheme6/icon_House.png');
+}
+
+html[theme = 'theme6'] .image__calculator
+{
+    background-image: url('./imagesTheme6/icon_clock.png');
+}

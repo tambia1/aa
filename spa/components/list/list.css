@@ -1,0 +1,27 @@
+.list
+{
+}
+
+@media only screen and (min-width: 960px) and (max-width: 9999px)
+{
+	.list 
+	{
+		display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-column-gap: 10px;
+	}
+
+    .cell:nth-child(1),
+    .cell:nth-child(2),
+    .cell:nth-child(3)
+    {
+        border-radius: 8px 8px 0px 0px;        
+    }
+
+    .cell:nth-last-child(1),
+    .cell:nth-last-child(2),
+    .cell:nth-last-child(3)
+    {
+        border-radius: 0px 0px 8px 8px;
+    }
+}

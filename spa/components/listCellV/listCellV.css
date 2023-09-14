@@ -1,0 +1,27 @@
+.cell-v
+{
+}
+
+.cell-v_check
+{
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url('./images/check.png');
+    position: absolute;
+    right: 10px;
+}
+
+.cell-v[isSelected = 'false'] .cell-v_check
+{
+    display: none;
+}
+
+.cell-v[isSelected = 'true']
+{
+    background-color: #ffffff;
+}

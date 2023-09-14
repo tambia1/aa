@@ -1,0 +1,39 @@
+.pick
+{
+	position: relative;
+	overflow: hidden;
+}
+
+#picker_panel
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow: auto;
+}
+
+#picker_panel::-webkit-scrollbar
+{
+	display: none;
+}
+
+
+.pick_item
+{
+	height: 44px;
+	display: flex;
+	align-items: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #000000;
+	font-size: 140%;
+	font-weight: bold;
+}
+
+.pick_item[isPressed = 'true']
+{
+	background-color: #eeeeee;
+}
+

@@ -1,0 +1,87 @@
+.cell-header
+{
+    width: 100%;
+    height: 50px;
+
+    font-size: 120%;
+    font-weight: normal;
+
+    color: #000000;
+    background-color: #dddddd;
+
+    box-sizing: border-box;
+    border-radius: 0px 0px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.cell-header_text
+{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.cell-header:first-child
+{
+    border-radius: 8px 8px 0px 0px;
+}
+
+.cell-header:last-child
+{
+    border-radius: 0px 0px 8px 8px;
+}
+
+.cell-header:last-child .cell-header_line
+{
+    display: none;
+}
+
+.cell-header:only-child
+{
+    border-radius: 8px 8px 8px 8px;
+}
+
+
+
+.cell-header[isEnabled = 'true']
+{
+}
+
+.cell-header[isEnabled = 'false']
+{
+    color: #999999;
+    background-color: #777777;
+}
+
+
+
+.cell-header[isPressed = 'true']
+{
+    color: #000000;
+	background-color: #dddddd;
+}
+
+.cell-header[isPressed = 'false']
+{
+}
+
+
+
+.cell-header[isSelected = 'true']
+{
+    color: #000000;
+	background-color: #cccccc;
+}
+
+.cell-header[isSelected = 'false']
+{
+}
+

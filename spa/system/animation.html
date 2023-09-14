@@ -1,0 +1,357 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"> 
+		 
+    	<title>Animation</title>
+    	
+    	<!-- disable IE 9 compatibale mode so html5 sound will work -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- system -->
+		<script type="text/javascript">
+			let spa = {};
+			spa.system = {};
+
+
+		</script>
+		<script type="text/javascript" src="animation.js"></script>
+		
+		<style>
+			body
+			{
+				margin: 0px;
+				padding: 0px;
+				background-color: gray;
+
+				font-family: Tahoma;
+			    font-size: 12px;
+			    font-weight: bold;
+				color: white;
+			}
+			
+			
+			#axis
+			{
+				position: absolute;
+				width: 1200px;
+				height: 500px;
+				top: 50px;
+				left: 50px;
+				background-color: black;
+			}
+			
+
+			#rect_0,
+			#rect_1,
+			#rect_2,
+			#rect_3,
+			#rect_4,
+			#rect_5,
+			#rect_6,
+			#rect_7
+			{
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				top: 500px;
+				left: 0px;
+				text-align: center;
+				line-height: 20px;
+			}
+
+			#rect_0 {background-color: red;}
+			#rect_1 {background-color: green;}
+			#rect_2 {background-color: blue;}
+			#rect_3 {background-color: cadetblue;}
+			#rect_4 {background-color: purple;}
+			#rect_5 {background-color: skyblue;}
+			#rect_6 {background-color: plum;}
+			#rect_7 {background-color: burlywood;}
+
+
+
+			#rect_desc,
+			#rect_0_desc,
+			#rect_1_desc,
+			#rect_2_desc,
+			#rect_3_desc,
+			#rect_4_desc,
+			#rect_5_desc,
+			#rect_6_desc,
+			#rect_7_desc
+			{
+				position: absolute;
+				left: 10px;
+    		}
+
+			#rect_desc {top: 10px; color: white;}
+			#rect_0_desc {top: 30px; color: red;}
+			#rect_1_desc {top: 50px; color: green;}
+			#rect_2_desc {top: 70px; color: blue;}
+			#rect_3_desc {top: 90px; color: cadetblue;}
+			#rect_4_desc {top: 110px; color: purple;}
+			#rect_5_desc {top: 130px; color: skyblue;}
+			#rect_6_desc {top: 150px; color: plum;}
+			#rect_7_desc {top: 170px; color: burlywood;}
+
+
+			#button_start_loop,
+			#button_stop_loop,
+			#button_resume,
+			#button_pause,
+			#button_reset
+			{
+				position: absolute;
+				width: 100px;
+				height: 25px;
+				right: 10px;
+				background-color: gray;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			#button_start_loop {top: 10px;}
+			#button_stop_loop  {top: 40px;}
+			#button_resume {top: 70px;}
+			#button_pause  {top: 100px;}
+			#button_reset {top: 130px;}
+		</style>
+        
+	</head>
+
+	<body>
+		
+		<div id="axis">
+			<div id="button_start_loop" onmousedown="startLoopAnimations();">START LOOP</div>
+			<div id="button_stop_loop" onmousedown="stopLoopAnimations();">STOP LOOP</div>
+			<div id="button_resume" onmousedown="resumeAnimations();">RESUME</div>
+			<div id="button_pause" onmousedown="pauseAnimations();">PAUSE</div>
+			<div id="button_reset" onmousedown="resetAnimations();">RESET</div>
+
+			<div id="rect_desc"></div>
+			<div id="rect_0_desc"></div>
+			<div id="rect_1_desc"></div>
+			<div id="rect_2_desc"></div>
+			<div id="rect_3_desc"></div>
+			<div id="rect_4_desc"></div>
+			<div id="rect_5_desc"></div>
+			<div id="rect_6_desc"></div>
+			<div id="rect_7_desc"></div>
+
+			<div id="rect_0">0</div>
+			<div id="rect_1">1</div>
+			<div id="rect_2">2</div>
+			<div id="rect_3">3</div>
+			<div id="rect_4">4</div>
+			<div id="rect_5">5</div>
+			<div id="rect_6">6</div>
+			<div id="rect_7">7</div>
+		</div>
+
+		<script type="text/javascript">
+			let rect_0_desc = document.querySelector('#rect_0_desc');
+			let rect_1_desc = document.querySelector('#rect_1_desc');
+			let rect_2_desc = document.querySelector('#rect_2_desc');
+			let rect_3_desc = document.querySelector('#rect_3_desc');
+			let rect_4_desc = document.querySelector('#rect_4_desc');
+			let rect_5_desc = document.querySelector('#rect_5_desc');
+			let rect_6_desc = document.querySelector('#rect_6_desc');
+			let rect_7_desc = document.querySelector('#rect_7_desc');
+
+			let rect_0 = document.querySelector('#rect_0');
+			let rect_1 = document.querySelector('#rect_1');
+			let rect_2 = document.querySelector('#rect_2');
+			let rect_3 = document.querySelector('#rect_3');
+			let rect_4 = document.querySelector('#rect_4');
+			let rect_5 = document.querySelector('#rect_5');
+			let rect_6 = document.querySelector('#rect_6');
+			let rect_7 = document.querySelector('#rect_7');
+
+			let rect_0_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_0.style.left = x + 'px';								
+				rect_0.style.top = y + 'px';
+
+				writeElementDetailt(args, rect_0_desc, '0');
+			}
+
+			let rect_1_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_1.style.left = x + 'px';								
+				rect_1.style.top = y + 'px';
+
+				writeElementDetailt(args, rect_1_desc, '1');
+			}
+
+			let rect_2_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_2.style.left = x + 'px';								
+				rect_2.style.top = y + 'px';
+
+				writeElementDetailt(args, rect_2_desc, '2');
+			}
+
+			let rect_3_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_3.style.left = x + 'px';								
+				rect_3.style.top = y + 'px';
+
+				writeElementDetailt(args, rect_3_desc, '3');
+			}
+
+			let rect_4_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_4.style.left = x + 'px';								
+				rect_4.style.top = y + 'px';
+
+				writeElementDetailt(args, rect_4_desc, '4');
+			}
+
+			let rect_5_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_5.style.left = x + 'px';								
+				rect_5.style.top = y + 'px';
+
+				writeElementDetailt(args, rect_5_desc, '5');
+			}
+
+			let rect_6_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_6.style.left = 0 + 'px';
+				rect_6.style.top = 0 + 'px';
+
+				rect_6.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0px)';
+
+				writeElementDetailt(args, rect_6_desc, '6');
+			}
+
+			let rect_6_callback_0 = function(args)
+			{
+				console.log('rect_6_callback_0');
+			}
+
+			let rect_6_callback_1 = function(args)
+			{
+				console.log('rect_6_callback_1');
+			}
+
+			let rect_7_callback = function(args)
+			{
+				let x = args.arrayResults[0];
+				let y = args.arrayResults[1];
+
+				rect_7.style.left = 0 + 'px';
+				rect_7.style.top = 0 + 'px';
+
+				rect_7.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0px)';
+
+				writeElementDetailt(args, rect_7_desc, '7');
+			}
+
+			let rect_7_callback_0 = function(args)
+			{
+				console.log('rect_7_callback_0');
+			}
+
+			let rect_7_callback_1 = function(args)
+			{
+				console.log('rect_7_callback_1');
+
+				stopAnimations();
+			}
+
+
+			let writeElementDetailt = function(args, element, number)
+			{
+				element.innerHTML = '';
+				element.innerHTML += number + ': x,y: ' + parseInt(args.arrayResults[0]) + ',' + parseInt(args.arrayResults[1]);
+				element.innerHTML += ', timeLength: ' + args.timeLength;
+				element.innerHTML += ', delayBeforeStart: ' + args.delayBeforeStart;
+				element.innerHTML += ', positionInPoints: ' + args.positionInPoints;
+				element.innerHTML += ', positionInPercent: ' + args.positionInPercent + '%';
+				element.innerHTML += ', direction: ' + args.direction;
+				element.innerHTML += ', numberOfRepeats: ' + args.numberOfRepeats;
+				element.innerHTML += ', isCyclic: ' + args.isCyclic;
+				element.innerHTML += ', isFinished: ' + args.isFinished;
+			}
+
+			let resumeAnimations = function()
+			{
+				for (let i = 0; i < animations.length; i++)
+				{
+					animations[i] && animations[i].resume();
+				}
+			}
+
+			let pauseAnimations = function()
+			{
+				for (let i = 0; i < animations.length; i++)
+				{
+					animations[i] && animations[i].pause();
+				}
+			}
+
+			let resetAnimations = function()
+			{
+				for (let i = 0; i < animations.length; i++)
+				{
+					animations[i] && animations[i].reset();
+				}
+			}
+
+			let startLoopAnimations = function()
+			{
+				for (let i = 0; i < animations.length; i++)
+				{
+					animations[i] && animations[i].startLoop();
+				}
+			}
+
+			let stopLoopAnimations = function()
+			{
+				for (let i = 0; i < animations.length; i++)
+				{
+					animations[i] && animations[i].stopLoop();
+				}
+			}
+
+			let Animation = spa.Animation;
+			let animations = [];
+
+			animations[0] = new Animation(10000, 	[[0, 1200], [500, 0, 500]], 	Animation.TIMING_LINEAR, 	Animation.DIRECTION_FORWARD, 	0, 	false,	1,		false, 	rect_0_callback, 	[] );
+			animations[1] = new Animation(10000, 	[[0, 1200], [500, 0, 500]], 	Animation.TIMING_EASE_IN, 	Animation.DIRECTION_FORWARD, 	0, 	false,	1,		false, 	rect_1_callback, 	[] );
+			animations[2] = new Animation(10000, 	[[0, 1200], [500, 0, 500]], 	Animation.TIMING_EASE_OUT,  Animation.DIRECTION_FORWARD, 	0, 	false,	1,		false, 	rect_2_callback, 	[] );
+
+			animations[3] = new Animation(10000, 	[[0, 1200], [250, 250]],  		Animation.TIMING_EASE,   	Animation.DIRECTION_FORWARD, 	5000,	false,	2,		false, 	rect_3_callback, 	[] );
+			animations[4] = new Animation(10000, 	[[0, 1200], [300, 300]],  		[0, 45, 50, 65, 100],  		Animation.DIRECTION_FORWARD, 	5000,	false,	2,		false, 	rect_4_callback, 	[] );
+			animations[5] = new Animation(10000, 	[[0, 1200], [350, 350]],		Animation.TIMING_LINEAR, 	Animation.DIRECTION_FORWARD, 	5000,	false,	2,		false, 	rect_5_callback, 	[] );
+
+			animations[6] = new Animation(4500, 	[[0, 1200], [400, 500]],		Animation.TIMING_EASE_OUT, 	Animation.DIRECTION_FORWARD, 	500,	true,	3, 	true, 	rect_6_callback, 	[{position: 0, direction: Animation.DIRECTION_STAND, callback: rect_6_callback_0}, {position: 5000, direction: Animation.DIRECTION_FORWARD, callback: rect_6_callback_1}] );
+			animations[7] = new Animation(4500, 	[[0, 1200], [450, 500]],		Animation.TIMING_EASE_OUT, 	Animation.DIRECTION_FORWARD, 	500,	true,	3, 	false, 	rect_7_callback, 	[{position: 0, direction: Animation.DIRECTION_STAND, callback: rect_7_callback_0}, {position: 5000, direction: Animation.DIRECTION_FORWARD, callback: rect_7_callback_1}] );
+
+		</script>
+
+	</body>
+	
+</html>

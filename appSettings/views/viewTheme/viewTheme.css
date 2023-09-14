@@ -1,0 +1,111 @@
+#view_theme
+{
+}
+
+
+.view_theme__phone__box
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.view_theme__phone
+{
+	width: 200px;
+	height: 250px;
+	border-radius: 10px;
+	background-color: #000000;
+}
+
+#view_desktop .view_theme__phone
+{
+	position: relative;
+}
+
+.view_theme__phone .ui_button_app
+{
+	width: 50px;
+	height: 70px;
+}
+
+.view_theme__phone .ui_button_app__image
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+}
+
+.view_theme__phone .ui_button_app__text
+{
+	width: 50px;
+	font-size: 80%;
+}
+
+
+
+
+
+#view_theme__panel
+{
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	right: 0px;
+	bottom: 10px;
+}
+
+.view_theme__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_theme__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_theme__caption
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 120%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.view_theme__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_theme__space
+{
+	height: 10px;
+}
+
+.view_theme__downloading
+{
+	margin-top: 10px;
+}
+
+.view_theme__downloading[isVisible = 'false']
+{
+	opacity: 0;
+}

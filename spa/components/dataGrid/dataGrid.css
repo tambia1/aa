@@ -1,0 +1,146 @@
+.datagrid
+{
+	border: 1px solid #9C9C9C;
+}
+
+#datagrid_header
+{
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	
+	background-image: linear-gradient(#ffffff 0%, #F6F6F6 30%, #F3F3F3 45%, #EDEDED 60%, #eeeeee 100%);
+}
+
+#datagrid_header .datagrid_cell
+{
+	line-height: 29px;
+	height: 29px;
+	border-left: 1px solid #9C9C9C;
+	border-bottom: 1px solid #9C9C9C;
+
+	font-size: 100%;
+	font-weight: bold;
+	color: #000000;
+}
+
+#datagrid_header .datagrid_cell [data-string]
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+#datagrid_header .datagrid_row:first-child .datagrid_cell
+{
+	border-top: 0px;	
+}
+
+#datagrid_header .datagrid_cell:first-child
+{
+	border-left: 0px;	
+}
+
+
+
+#datagrid_header .datagrid_cell[isPressed = 'true']
+{
+	background-color: #C6D3E4;
+}
+
+#datagrid_header .datagrid_cell[isSelected = 'true']
+{
+	background-color: #C6D3E4;
+}
+
+
+
+
+
+#datagrid_panel
+{
+	width:  100%;
+	position: absolute;
+	left: 0px;
+	top: 29px;
+	bottom: 0px;
+}
+
+
+
+.datagrid_row
+{
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	box-sizing: border-box;
+}
+
+.datagrid_row:nth-child(2n+1)
+{
+	background-color: #ffffff;
+}
+
+.datagrid_row:nth-child(2n)
+{
+	background-color: #EDEDED;
+}
+
+.datagrid_row:only-child
+{
+	background-color: transparent;
+}
+
+.datagrid_cell
+{
+	display: table-cell;
+	height: 29px;
+	line-height: 29px;
+
+	color: #000000;
+
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.datagrid_cell [data-string]
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*white-space: nowrap;*/
+}
+
+
+.datagrid_row .datagrid_cell
+{
+	border-left: 1px solid #D0D7E5;
+	border-bottom: 1px solid #D0D7E5;
+}
+
+.datagrid_row .datagrid_cell:first-child
+{
+	border-left: 0px;
+}
+
+.datagrid_row:first-child .datagrid_cell
+{
+	border-top: 1px solid #D0D7E5;
+}
+
+
+.datagrid_row[isPressed = 'true'] .datagrid_cell
+{
+	background-color: #C6D3E4;
+}
+
+.datagrid_row[isSelected = 'true'] .datagrid_cell
+{
+	background-color: #C6D3E4;
+}
+
+
+

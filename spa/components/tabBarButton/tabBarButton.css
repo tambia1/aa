@@ -1,0 +1,90 @@
+.tabbar_button
+{
+	display: inline-block;
+	width: 10%;
+	height: 70px;
+	position: relative;
+	background-color: transparent;
+	box-sizing: border-box;
+	transition: width 0.3s ease-out 0s;
+}
+
+.tabbar_button[isPressed = 'true']
+{
+	background-color: #ffffff88;
+}
+
+.tabbar_button[isSelected = 'true']
+{
+
+}
+
+@media only screen and (min-width: 960px) and (max-width: 9999px)
+{
+	.tabbar_button 
+	{
+		width: 10%;
+	}
+}
+
+.tabbar_button_image
+{
+	display: flex;
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 8px;
+	bottom: 16px;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+.tabbar_button_text
+{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 5px;
+	bottom: 3px;
+
+	font-size: 90%;
+	font-weight: bold;
+	color: #000000;
+}
+
+
+
+
+.tabbar_button_badge
+{
+	width: auto;
+	height: auto;
+	min-width: 10px;
+	min-height: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	background-color: #8E3D38;
+	font-size: 65%;
+	border-radius: 10px;
+	padding: 3px;
+	line-height: normal;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tabbar_button_badge[isVisible = 'false']
+{
+	display: none;
+}
+
+

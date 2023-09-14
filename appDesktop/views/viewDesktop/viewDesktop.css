@@ -1,0 +1,124 @@
+#view_desktop {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.view_desktop__done {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background-color: #eeeeee;
+	border-radius: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: all 0.3s ease 0s;
+}
+
+.view_desktop__done[isVisible="false"] {
+	opacity: 0;
+}
+
+.view_desktop__done[isPressed="true"] {
+	background-color: #aaaaaa;
+}
+
+.view_desktop__item {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 560px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 560px) and (max-width: 640px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 720px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 720px) and (max-width: 800px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 880px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 880px) and (max-width: 960px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 960px) and (max-width: 9999px) {
+	.view_desktop__item {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+.image__settings {
+	background-image: url("./images/settings.png");
+}
+
+.image__messenger {
+	background-image: url("./images/messenger.png");
+}
+
+.image__calendar {
+	background-image: url("./images/calendar.png");
+}
+
+.image__photos {
+	background-image: url("./images/photos.png");
+}
+
+.image__camera {
+	background-image: url("./images/camera.png");
+}
+
+.image__contacts {
+	background-image: url("./images/contacts.png");
+}
+
+.image__calculator {
+	background-image: url("./images/calculator.png");
+}
+
+.image__ninja {
+	background-image: url("./images/ninja.png");
+}
+
+.image__clash_royale {
+	background-image: url("./images/clashRoyale.webp");
+}
+
+.image__speed {
+	background-image: url("./images/speed.png");
+}
+
+.image__tetris {
+	background-image: url("./images/tetris.png");
+}

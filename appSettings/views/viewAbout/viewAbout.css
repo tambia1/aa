@@ -1,0 +1,49 @@
+#view-about
+{
+	background-color: var(--color_view_bg);
+	color: var(--color_text);
+}
+
+#view-about__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#view-about__panel .container
+{
+	padding: 10px;
+}
+
+.view-about__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view-about__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view-about__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view-about__space
+{
+	height: 10px;
+}
+

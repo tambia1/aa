@@ -1,0 +1,27 @@
+.alphabet
+{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0px;
+	right: 6px;
+	bottom: 0px;
+	overflow: hidden;
+	background-color: #eeeeeedd;
+	font-size: 70%;
+	color: #0CABF3;
+}
+
+html[dir='rtl'] .alphabet{
+	transform: scaleX(-1);
+}
+
+.alphabet_item
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 100%;
+	font-size: 1.0vh;
+}

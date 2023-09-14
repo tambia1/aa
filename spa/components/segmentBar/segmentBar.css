@@ -1,0 +1,127 @@
+.segment
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	padding: 10px;
+}
+
+.segment_container
+{
+	display: inline-flex;
+    background-color: #dddddd;
+    border-radius: 50px;
+}
+
+.segment_button
+{
+	display: inline-flex;
+	position: relative;
+	width: 20vw;
+	max-width: 150px;
+	height: 40px;
+	border-radius: 50px;
+	margin: 5px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 0;
+}
+
+.segment_button[isSelected = 'true']
+{
+	color: #000000;
+}
+
+.segment_button[isSelected = 'false'][isPressed = 'true']
+{
+	background-color: #dddddd;
+}
+
+.segment_button[isSelected = 'true'][isPressed = 'true']
+{
+	background-color: #dddddd;
+}
+
+
+
+
+.segment_button_text
+{
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 10px;
+	margin-right: 10px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	width: 100%;
+	z-index: 2;
+}
+
+.segment_button_line
+{
+	display: inline-block;
+	width: 1px;
+	height: 20px;
+	background-color: #9C9C9C;
+}
+
+.segment_button_image
+{
+	display: inline-table;
+	width: 30px;
+	height: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+}
+
+
+.segment_button_slider
+{
+	display: inline-flex;
+	position: absolute;
+	width: 20vw;
+	max-width: 150px;
+	height: 40px;
+	background-color: #bbbbbb;
+	border-radius: 50px;
+	margin: 5px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 0;
+	transition: transform 0.3s ease 0s;
+    transform: translateX(calc(20vw + 10px));
+	pointer-events: none;
+}
+
+.segment[selectedIndex = '0'] .segment_button_slider
+{
+    transform: translateX(calc(0 * (20vw + 10px)));
+}
+
+.segment[selectedIndex = '1'] .segment_button_slider
+{
+    transform: translateX(calc(1 * (20vw + 10px)));
+}
+
+.segment[selectedIndex = '2'] .segment_button_slider
+{
+    transform: translateX(calc(2 * (20vw + 10px)));
+}
+
+.segment[selectedIndex = '3'] .segment_button_slider
+{
+    transform: translateX(calc(3 * (20vw + 10px)));
+}
+
+.segment[selectedIndex = '4'] .segment_button_slider
+{
+    transform: translateX(calc(4 * (20vw + 10px)));
+}
+

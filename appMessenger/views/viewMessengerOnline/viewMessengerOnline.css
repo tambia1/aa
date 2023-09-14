@@ -1,0 +1,56 @@
+#view_messenger_online
+{
+	background-color: #000000;
+	color: var(--color_text);
+}
+
+#view_messenger_online__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 50px;
+}
+
+#view_messenger_online__panel .container
+{
+	padding: 10px;
+}
+
+.view_messenger_online__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_messenger_online__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_messenger_online__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+	color: #ffffff;
+	margin: 10px;
+}
+
+.view_messenger_online__text[isHighlight = 'true']
+{
+	color: #aaffaa;
+}
+
+
+.view_messenger_online__space
+{
+	height: 10px;
+}

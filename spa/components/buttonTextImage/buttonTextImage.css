@@ -1,0 +1,53 @@
+.button_text_image
+{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	position: relative;
+
+	border: 1px solid #9C9C9C;
+	background-image: linear-gradient(#ffffff 0%, #F6F6F6 30%, #F3F3F3 45%, #EDEDED 60%, #eeeeee 100%);
+	border-radius: 25px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.20);
+	box-sizing: border-box;
+}
+
+.button_text_image[isPressed = 'true']
+{
+	background-image: linear-gradient(#acc5e9 0%, #a3c0f2 18%,#61a0ed 39%, #55a3f2 70%, #82c2f1 91.72%, #9AD2F2 100%);
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+}
+
+.button_text_image_image
+{
+	display: flex;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	right: 10%;
+	bottom: 25%;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+.button_text_image_text
+{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	top: 10%;
+	bottom: 10%;
+
+	font-size: 100%;
+	font-weight: bold;
+	color: #000000;
+	text-shadow: 0px 1px 3px #999999;
+}
+
+

@@ -1,0 +1,121 @@
+.list_cell_expander
+{
+	
+}
+
+.list_cell_expander > .cell
+{
+	background-color: #B0BCCD;
+	background-image: linear-gradient(rgba(128, 128, 128, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+	color: #ffffff;
+	text-shadow: 0px -1px 1px #000000;
+
+	border: none;
+	border-radius: 0px 0px 0px 0px;
+	transition: border-radius 0.3s ease 0s;
+}
+
+
+
+.list_cell_expander:first-child > .cell
+{
+	border-radius: 8px 8px 0px 0px;
+}
+
+.list_cell_expander:last-child[isExpanded = 'false']  > .cell
+{
+	border-radius: 0px 0px 8px 8px;
+	transition: border-radius 0.0s ease 0.3s;
+}
+
+
+
+.list_cell_expander > .cell[isEnabled = 'true'] 
+{
+}
+
+.list_cell_expander > .cell[isEnabled = 'false'] 
+{
+	color: #333333;
+	text-shadow: 0px 1px 1px #ffffff;
+
+	background-color: #697A8E;
+}
+
+
+.list_cell_expander[isExpanded = 'false'] > .cell[isPressed = 'true']
+{
+	background-color: #697A8E;
+}
+
+.list_cell_expander[isExpanded = 'true'] > .cell[isPressed = 'true']
+{
+	background-color: #697A8E;
+}
+
+.list_cell_expander[isExpanded = 'false'] > .cell[isPressed = 'flase']
+{
+}
+
+.list_cell_expander[isExpanded = 'true'] > .cell[isPressed = 'false']
+{
+}
+
+
+
+.list_cell_expander > .cell
+{
+}
+
+.list_cell_expander > .cell[isEnabled = 'false']
+{
+	color: #333333;
+	text-shadow: 0px -1px 1px #000000;
+}
+
+.list_cell_expander > .cell[isPressed = 'true']
+{
+}
+
+.list_cell_expander > .cell > .cell_text
+{
+}
+
+.list_cell_expander > .cell > .cell_image
+{
+}
+
+.list_cell_expander > .cell > .cell_right_image
+{
+}
+
+.list_cell_expander[isExpanded = 'false'] > .cell[isPressed = 'true'] > .cell_right_image,
+.list_cell_expander[isExpanded = 'true'] > .cell[isPressed = 'false'] > .cell_right_image
+{
+	transform: rotate(-90deg);
+	transition: transform 0.3s ease 0s;
+}
+
+.list_cell_expander[isExpanded = 'false'] > .cell[isPressed = 'false'] > .cell_right_image,
+.list_cell_expander[isExpanded = 'true'] > .cell[isPressed = 'true'] > .cell_right_image
+{
+	transform: rotate(90deg);
+	transition: transform 0.3s ease 0s;
+}
+
+
+
+.list_cell_expander > .expander
+{
+	height: 0px;
+}
+
+
+
+
+
+.list_cell_expander > .expander > .list .cell
+{
+	border-radius: 0px 0px 0px 0px;
+}

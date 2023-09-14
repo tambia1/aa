@@ -1,0 +1,94 @@
+.cell
+{
+    width: 100%;
+    height: 50px;
+
+    font-size: 120%;
+    font-weight: normal;
+
+    color: #000000;
+    background-color: #ffffff;
+
+    box-sizing: border-box;
+    border-radius: 0px 0px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.cell_text
+{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cell_line
+{
+    height: 1px;
+    width: 100%;
+    margin-left: 10px;
+    background-color: #eeeeee;
+}
+
+
+
+.cell:first-child
+{
+    border-radius: 8px 8px 0px 0px;
+}
+
+.cell:last-child
+{
+    border-radius: 0px 0px 8px 8px;
+}
+
+.cell:last-child .cell_line
+{
+    display: none;
+}
+
+.cell:only-child
+{
+    border-radius: 8px 8px 8px 8px;
+}
+
+
+
+.cell[isEnabled = 'true']
+{
+}
+
+.cell[isEnabled = 'false']
+{
+    color: #999999;
+    background-color: #777777;
+}
+
+
+
+.cell[isPressed = 'true']
+{
+    color: #000000;
+	background-color: #dddddd;
+}
+
+.cell[isPressed = 'false']
+{
+}
+
+
+
+.cell[isSelected = 'true']
+{
+    color: #000000;
+	background-color: #cccccc;
+}
+
+.cell[isSelected = 'false']
+{
+}
+

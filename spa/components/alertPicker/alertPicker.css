@@ -1,0 +1,180 @@
+.alertPicker
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	opacity: 1;
+	transition: opacity 0.3s ease 0.0s;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.alertPicker[isVisible = 'false']
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.alertPicker_popup
+{
+	position: absolute;
+	left: 15px;
+	right: 15px;
+	top: 50%;
+	margin-top: -60%;
+	height: auto;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.alertPicker_popup_title
+{
+	color: #000000;
+	font-size: 160%;
+	font-weight: bold;
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.alertPicker_popup_subtitle
+{
+	color: #999999;
+	font-size: 120%;
+	margin: 10px;
+}
+
+.alertPicker_panel
+{
+	position: relative;
+	height: 270px;
+	z-index: 2;
+	background-color: #ffffff;
+	transition: opacity 0.3s ease 0.0s;
+	border-top: 1px solid #eeeeee;
+	box-sizing: border-box;
+}
+
+.alertPicker_list
+{
+}
+
+.alertPicker .cellV[isSelected = 'true']
+{
+	color: #666666;
+}
+
+
+.alertPicker_background
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alertPicker_buttons
+{
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid #eeeeee;
+	box-sizing: border-box;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.alertPicker_button_select
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	background-color: #4AB54A;
+	background-image: none;
+	border-radius: 50px;
+	border: none;
+	color: #ffffff;
+	font-size: 120%;
+	font-weight: bold;
+	margin: 10px;
+}
+
+.alertPicker_button_select[isPressed = 'true']
+{
+	background-color: #2A952A;
+}
+
+.alertPicker_button_cancel
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	background-color: #dddddd;
+	background-image: none;
+	border-radius: 50px;
+	border: none;
+	color: #999999;
+	font-size: 120%;
+	font-weight: bold;
+	margin: 10px;
+}
+
+.alertPicker_button_cancel[isPressed = 'true']
+{
+	background-color: var(--color_0_pressed);
+}
+
+
+
+.alertPicker .cellImage
+{
+	border: none;
+	border-radius: unset;
+	background-color: transparent;
+}
+
+.alertPicker .cellImage[isPressed = 'true']
+{
+	background-color: #eeeeee;
+	background-image: none;
+}
+
+.alertPicker .cellImage .cellImage_image
+{
+	height: 23px;
+	width: 23px;
+}
+
+.alertPicker .cellImage .cellImage_text
+{
+	font-size: 160%;
+	margin-left: 10px;
+}
+
+
+.alertPicker_list[type = 'List.SELECT_SINGLE'] .cellImage[isSelected = 'true'] .cellImage_image
+{
+	background-image: url('./images/radio_button_on.png');
+}
+
+.alertPicker_list[type = 'List.SELECT_SINGLE'] .cellImage[isSelected = 'false'] .cellImage_image
+{
+	background-image: url('./images/radio_button_off.png');
+}
+
+.alertPicker_list[type = 'List.SELECT_MULTIPLE'] .cellImage[isSelected = 'true'] .cellImage_image
+{
+	background-image: url('./images/checkbox_on.png');
+}
+
+.alertPicker_list[type = 'List.SELECT_MULTIPLE'] .cellImage[isSelected = 'false'] .cellImage_image
+{
+	background-image: url('./images/checkbox_off.png');
+}
+
+
+

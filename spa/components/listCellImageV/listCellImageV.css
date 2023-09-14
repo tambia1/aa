@@ -1,0 +1,46 @@
+.cell-image-v
+{
+}
+
+.cell-image-v_check
+{
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url('./images/check.png');
+    position: absolute;
+    right: 10px;
+}
+
+.cell-image-v[isSelected = 'false'] .cell-image-v_check
+{
+    display: none;
+}
+
+.cell-image-v[isSelected = 'true']
+{
+    background-color: #ffffff;
+}
+
+.cell-image_image
+{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url('./images/settings.png');
+    position: absolute;
+}
+
+
+
+.cell-image-v .cell_text {
+    margin-left: 30px;
+}

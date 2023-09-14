@@ -1,0 +1,12 @@
+.navbar_view
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	transform: translate3d(0px, 0px, 0px);
+	z-index: 1;
+	background-color: #eeeeee;
+}
+

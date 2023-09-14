@@ -1,0 +1,64 @@
+#view_language
+{
+	background-color: var(--color_view_bg);
+	color: var(--color_text);
+}
+
+#view_language__panel
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.view_language__title
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 180%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.view_language__subtitle
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 160%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.view_language__caption
+{
+	font-weight: bold;
+	white-space: pre-wrap;
+	font-size: 120%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.view_language__text
+{
+	white-space: pre-wrap;
+	font-size: 140%;
+}
+
+.view_language__space
+{
+	height: 10px;
+}
+
+
+.view_language__icon_uk
+{
+	background-image: url('./images/United-Kingdom-icon.png');
+}
+
+.view_language__icon_finland
+{
+	background-image: url('./images/Finland-icon.png');
+}
+

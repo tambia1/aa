@@ -1,0 +1,26 @@
+﻿{
+	"name": "Apps Area",
+	"short_name": "AA",
+	"description": "Apps Area",
+	"categories": ["games", "kids"],
+	"theme_color": "#000000",
+	"background_color": "#000000",
+	"display_override": ["fullscreen", "minimal-ui"],
+	"display": "standalone",
+	"orientation": "portrait",
+	"lang": "en",
+	"dir": "ltr",
+	"start_url": "./index.html",
+	"icons": [
+		{
+			"src": "./app/images/icon_120x120.png",
+			"sizes": "120x120",
+			"type": "image/png"
+		},
+		{
+			"src": "./app/images/icon_512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

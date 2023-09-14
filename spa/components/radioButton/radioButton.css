@@ -1,0 +1,39 @@
+.radiobutton
+{
+	display: inline-flex;
+	align-items: center;
+}
+
+.radiobutton_text
+{
+	display: inline-block;
+	margin-left: 3px;
+}
+
+input[type="radio"]
+{
+	display: none;
+	-webkit-appearance: radio;
+}
+
+input[type="radio"] + label
+{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-size: 100%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-image: url('./images/radioButtonEmpty.png');
+}
+
+input[type="radio"]:checked + label
+{
+	background-image: url('./images/radioButtonFull.png');
+}
+
+html[dir="rtl"] input[type="radio"]:checked + label
+{
+	transform: scaleX(-1);
+	direction: rtl;
+}
