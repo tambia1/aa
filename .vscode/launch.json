@@ -1,0 +1,31 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"compounds": [
+		{
+			"name": "Run project",
+			"configurations": ["Launch Edge 8080", "Run dev"],
+			"stopAll": true
+		}
+	],
+	"configurations": [
+		{
+			"name": "Launch Edge 8080",
+			"type": "msedge",
+			"request": "launch",
+			"url": "http://localhost:8080",
+			"webRoot": "${workspaceFolder}",
+			"sourceMapPathOverrides": {
+				"\\mnt\\c\\*": "C:/*"
+			}
+		},
+		{
+			"name": "Run deploy",
+			"command": "npm run deploy",
+			"request": "launch",
+			"type": "node-terminal"
+		}
+	]
+}
