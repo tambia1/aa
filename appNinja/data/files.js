@@ -1,8 +1,7 @@
 app.appNinja.files = [
-	"appNinja/data/strings.js",
+	'appNinja/data/strings.js',
 
-	"appNinja/views/ViewNinja/gameNinja.js",
-	"appNinja/views/ViewNinja/ViewNinja.css",
-	"appNinja/views/ViewNinja/ViewNinja.js",
+	'appNinja/views/viewNinja/gameNinja.js',
+	'appNinja/views/viewNinja/viewNinja.css',
+	'appNinja/views/viewNinja/viewNinja.js',
 ];
-
